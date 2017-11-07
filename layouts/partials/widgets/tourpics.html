@@ -2,11 +2,11 @@
 <div class="panel panel-default sidebar-menu">
     <div class="panel-body">
         <div class="image" style="margin-bottom: 0.5em;">
-            <img style="width:100%; height:auto; cursor: zoom-in;" src="{{ .Site.BaseURL}}{{ .Params.banner }}" class="img-responsive" alt="">
+            <img style="width:100%; height:auto; cursor: zoom-in;" src="{{ .Site.BaseURL}}/img/uploads/{{ .Params.banner }}" class="img-responsive" alt="">
         </div>
         {{ range .Params.imgs }}
         <div class="image" style="margin-bottom: 0.5em;">
-            <img style="width:100%; height:auto; cursor: zoom-in;" src="{{ $.Site.BaseURL}}{{ . }}" class="img-responsive" alt="">
+            <img style="width:100%; height:auto; cursor: zoom-in;" src="{{ $.Site.BaseURL}}/img/uploads/{{ . }}" class="img-responsive" alt="">
         </div>
         {{ end }}
     </div>
