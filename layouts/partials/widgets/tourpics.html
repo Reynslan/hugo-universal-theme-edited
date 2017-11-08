@@ -6,7 +6,7 @@
         </div>
         {{ range .Params.imgs }}
         <div class="image" style="margin-bottom: 0.5em;">
-            <img style="width:100%; height:auto; cursor: zoom-in;" src="{{ $.Site.BaseURL}}{{ .image }}" class="img-responsive" alt="">
+            <img style="width:100%; height:auto; cursor: zoom-in;" src="{{ $.Site.BaseURL}}{{ . }}" class="img-responsive" alt="">
         </div>
         {{ end }}
     </div>
