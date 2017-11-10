@@ -4,9 +4,29 @@
         <div class="image" style="margin-bottom: 0.5em;">
             <img style="width:100%; height:auto; cursor: zoom-in;" src="{{ .Site.BaseURL}}img/uploads/{{ .Params.banner }}" class="img-responsive" alt="">
         </div>
-        {{ range .Params.imgs }}
+        {{ if .Params.image1 }}
         <div class="image" style="margin-bottom: 0.5em;">
-            <img style="width:100%; height:auto; cursor: zoom-in;" src="{{ $.Site.BaseURL}}{{ . }}" class="img-responsive" alt="">
+            <img style="width:100%; height:auto; cursor: zoom-in;" src="{{ $.Site.BaseURL}}{{ .Params.image1 }}" class="img-responsive" alt="">
+        </div>
+        {{ end }}
+        {{ if .Params.image2 }}
+        <div class="image" style="margin-bottom: 0.5em;">
+            <img style="width:100%; height:auto; cursor: zoom-in;" src="{{ $.Site.BaseURL}}{{ .Params.image2 }}" class="img-responsive" alt="">
+        </div>
+        {{ end }}
+        {{ if .Params.image3 }}
+        <div class="image" style="margin-bottom: 0.5em;">
+            <img style="width:100%; height:auto; cursor: zoom-in;" src="{{ $.Site.BaseURL}}{{ .Params.image3 }}" class="img-responsive" alt="">
+        </div>
+        {{ end }}
+        {{ if .Params.image4 }}
+        <div class="image" style="margin-bottom: 0.5em;">
+            <img style="width:100%; height:auto; cursor: zoom-in;" src="{{ $.Site.BaseURL}}{{ .Params.image4 }}" class="img-responsive" alt="">
+        </div>
+        {{ end }}
+        {{ if .Params.image5 }}
+        <div class="image" style="margin-bottom: 0.5em;">
+            <img style="width:100%; height:auto; cursor: zoom-in;" src="{{ $.Site.BaseURL}}{{ .Params.image5 }}" class="img-responsive" alt="">
         </div>
         {{ end }}
     </div>
