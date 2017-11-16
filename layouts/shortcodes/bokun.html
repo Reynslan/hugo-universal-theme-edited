@@ -1,0 +1,17 @@
+<div id="bokun-{{$.Page.Params.bokun_var | safeJS }}"></div>
+<script type="text/javascript">// <![CDATA[
+var {{$.Page.Params.bokun_var | safeJS }};
+(function(d, t) {
+  var host = 'widgets.bokun.is';
+  var frameUrl = 'https://' + host + '/widgets/{{substr $.Page.Params.bokun_var 1 4}}?bookingChannelUUID=bcef80ec-4797-4aa9-9447-03da40db5eb4&activityId={{$.Page.Params.bokun_activityId | safeJS }}&lang=EN&ccy=ISK&hash={{$.Page.Params.bokun_var | safeJS }}';
+  var s = d.createElement(t), options = {'host': host, 'frameUrl': frameUrl, 'widgetHash':'{{$.Page.Params.bokun_var | safeJS }}', 'autoResize':true,'height':'','width':'100%', 'minHeight': 0,'async':true, 'ssl':true, 'affiliateTrackingCode': '' };
+  s.src = 'https://' + host + '/assets/javascripts/widgets/embedder.js';
+  s.onload = s.onreadystatechange = function() {
+    var rs = this.readyState; if (rs) if (rs != 'complete') if (rs != 'loaded') return;
+    try { 
+      {{$.Page.Params.bokun_var | safeJS }} = new BokunWidgetEmbedder(); {{$.Page.Params.bokun_var | safeJS }}.initialize(options); {{$.Page.Params.bokun_var | safeJS }}.display();
+    } catch (e) {}
+  };
+  var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s, scr);
+})(document, 'script');
+// ]]></script>
