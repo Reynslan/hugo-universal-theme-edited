@@ -18,7 +18,15 @@
 
                 {{ $posts := .Paginate (where .Data.Pages "Type" "tours") }}
                 {{ range $posts.Pages }}
+                {{ if .Site.Params.recent_posts.four_columns }}
                 <div class="col-md-3 col-sm-6">
+                {{ end }}
+                {{ if .Site.Params.recent_posts.three_columns }}
+                <div class="col-md-4 col-sm-6">
+                {{ end }}
+                {{ if .Site.Params.recent_posts.two_columns }}
+                <div class="col-md-6 col-sm-6">
+                {{ end }}
                     <div class="box-image-text blog">
                         <div class="top">
                             <div class="image" style="overflow:hidden">
